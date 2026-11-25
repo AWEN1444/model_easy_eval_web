@@ -1,0 +1,4 @@
+[
+ {"category":"指令遵循","question":"只用一个 JSON 对象返回 2+3 的结果，字段为 result。","reference":"{\"result\":5}","criteria":"数值正确，且没有额外文本"},
+ {"category":"代码生成","question":"写一个 Python 函数判断列表中是否存在重复元素。","reference":"","criteria":"处理空列表，逻辑正确，解释复杂度"}
+]
