@@ -1,0 +1,16 @@
+{
+  "id": "sft-step-1200",
+  "name": "SFT checkpoint-1200",
+  "role": "candidate",
+  "checkpoint": "replace-with-real-sft-checkpoint-or-weight-hash",
+  "model": "your-served-model-id",
+  "base_url": "http://localhost:8000/v1",
+  "api_key_env": "",
+  "temperature": 0.0,
+  "max_tokens": 2048,
+  "timeout": 120,
+  "system": "",
+  "extra": {},
+  "training_data_version": "train-v1",
+  "training_config": {"method": "SFT", "step": 1200}
+}

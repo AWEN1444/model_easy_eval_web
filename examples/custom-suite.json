@@ -1,0 +1,29 @@
+{
+  "id": "my-business-regression",
+  "name": "自定义题库示例（请替换为真实任务）",
+  "version": "1.0.0",
+  "description": "演示题库结构与不同判定方式；没有包含或验证任何自研DSL。",
+  "questions": [
+    {
+      "id": "format-001",
+      "category": "输出约束",
+      "question": "仅输出JSON对象，字段ok为布尔值true，字段count为整数3。不得有额外文字。",
+      "evaluator": "json",
+      "expected": {"ok": true, "count": 3},
+      "critical": true,
+      "options": {"allow_fences": false},
+      "tags": ["format", "holdout"]
+    },
+    {
+      "id": "business-001",
+      "category": "需求理解",
+      "question": "为一个本地任务队列设计失败重试策略。要求：最多重试3次；参数错误不重试；记录每次尝试；重复执行不能产生重复业务记录。请说明方案。",
+      "evaluator": "judge",
+      "reference": "对暂时性故障最多重试3次，参数错误直接失败；为任务分配稳定幂等键，记录每次执行状态与错误。",
+      "criteria": "四项要求各25分：重试上限、错误分类、尝试记录、业务幂等。完全缺失的项不得分。不要根据文风加分。",
+      "options": {"pass_score": 80},
+      "critical": false,
+      "tags": ["business", "holdout"]
+    }
+  ]
+}

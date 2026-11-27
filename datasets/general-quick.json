@@ -1,0 +1,275 @@
+{
+  "id": "general-quick",
+  "name": "通用工程回归 · 快检20题",
+  "version": "1.0.0",
+  "description": "从核心80题固定抽取的20题，适合每轮训练快速检查。与完整题库为不同评测协议，跨快检/核心结果不会直接给出替换结论。",
+  "questions": [
+    {
+      "id": "math-01",
+      "category": "数值推理",
+      "question": "计算 17 + 28 × 3。只输出整数。",
+      "evaluator": "exact",
+      "expected": "101",
+      "reference": "101",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-02",
+      "category": "数值推理",
+      "question": "计算 3/4 + 1/8。只输出十进制小数，保留3位小数，小数点前保留0。",
+      "evaluator": "exact",
+      "expected": "0.875",
+      "reference": "0.875",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-09",
+      "category": "数值推理",
+      "question": "数列 [9,1,6,3,8] 的中位数是多少？只输出整数。",
+      "evaluator": "exact",
+      "expected": "6",
+      "reference": "6",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-01",
+      "category": "逻辑与约束",
+      "question": "所有红色零件都是圆形。零件A是红色。A是否必然是圆形？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "YES",
+      "reference": "YES",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-02",
+      "category": "逻辑与约束",
+      "question": "所有管理员都是员工；有些员工是工程师。能否必然推出所有管理员都是工程师？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "NO",
+      "reference": "NO",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-01",
+      "category": "结构化输出",
+      "question": "计算2+3。仅输出一个JSON对象，唯一字段 result，值为整数。",
+      "evaluator": "json",
+      "expected": {
+        "result": 5
+      },
+      "reference": "{\"result\": 5}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-02",
+      "category": "结构化输出",
+      "question": "仅输出一个JSON对象：enabled 为布尔值 false，count 为整数 0。不得把值写成字符串。",
+      "evaluator": "json",
+      "expected": {
+        "enabled": false,
+        "count": 0
+      },
+      "reference": "{\"enabled\": false, \"count\": 0}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-10",
+      "category": "结构化输出",
+      "question": "仅输出JSON对象：a为整数1，b为字符串\"1\"，c为布尔值true。",
+      "evaluator": "json",
+      "expected": {
+        "a": 1,
+        "b": "1",
+        "c": true
+      },
+      "reference": "{\"a\": 1, \"b\": \"1\", \"c\": true}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-01",
+      "category": "信息提取",
+      "question": "从文本“订单号：A-103；总价：42.50元；状态：已付”提取订单号。仅输出订单号。",
+      "evaluator": "exact",
+      "expected": "A-103",
+      "reference": "A-103",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-02",
+      "category": "信息提取",
+      "question": "文本：联系人王明，邮箱 wang@example.org，电话未提供。仅输出JSON对象，字段 email 与 phone，缺失电话用null。",
+      "evaluator": "json",
+      "expected": {
+        "email": "wang@example.org",
+        "phone": null
+      },
+      "reference": "{\"email\": \"wang@example.org\", \"phone\": null}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-01",
+      "category": "代码理解",
+      "question": "Python 3：x=[1,2]; y=x; y.append(3)。仅输出 x 的最终值，使用JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "reference": "[1, 2, 3]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-02",
+      "category": "代码理解",
+      "question": "Python 3：list(range(2,8,2)) 的结果是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        2,
+        4,
+        6
+      ],
+      "reference": "[2, 4, 6]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-10",
+      "category": "代码理解",
+      "question": "Python 3：a=[[0]]*2; a[0][0]=1。此时a是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "reference": "[[1], [1]]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-01",
+      "category": "边界与异常",
+      "question": "一个函数约定：空列表的最大值返回null，非空返回最大值。输入[]。仅输出JSON对象 {\"result\":...}。",
+      "evaluator": "json",
+      "expected": {
+        "result": null
+      },
+      "reference": "{\"result\": null}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-02",
+      "category": "边界与异常",
+      "question": "除法接口约定：分母为0时返回 {\"error\":\"division_by_zero\"}，否则返回结果。输入分子7、分母0。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "division_by_zero"
+      },
+      "reference": "{\"error\": \"division_by_zero\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-01",
+      "category": "文本处理",
+      "question": "把字符串 \"  model eval  \" 去除首尾空格，保留中间空格。仅输出结果字符串，不加引号。",
+      "evaluator": "exact",
+      "expected": "model eval",
+      "reference": "model eval",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-02",
+      "category": "文本处理",
+      "question": "将 \"a,,b,\" 按英文逗号分割并保留空项。仅输出JSON字符串数组。",
+      "evaluator": "json",
+      "expected": [
+        "a",
+        "",
+        "b",
+        ""
+      ],
+      "reference": "[\"a\", \"\", \"b\", \"\"]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-01",
+      "category": "接口参数",
+      "question": "接口 add(a:int,b:int)。用户要求把3和5相加。仅输出JSON对象，字段 tool=\"add\" 和 arguments，arguments内含a与b。",
+      "evaluator": "json",
+      "expected": {
+        "tool": "add",
+        "arguments": {
+          "a": 3,
+          "b": 5
+        }
+      },
+      "reference": "{\"tool\": \"add\", \"arguments\": {\"a\": 3, \"b\": 5}}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-02",
+      "category": "接口参数",
+      "question": "接口 search(query:str,limit:int=10)。用户要求搜索“模型评测”，最多3条。仅输出参数JSON对象，字段query、limit。",
+      "evaluator": "json",
+      "expected": {
+        "query": "模型评测",
+        "limit": 3
+      },
+      "reference": "{\"query\": \"模型评测\", \"limit\": 3}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-10",
+      "category": "接口参数",
+      "question": "接口 rename(id:int,new_name:str)，new_name为必填。用户只提供id=2。约定缺参返回 {\"error\":\"missing_new_name\"}。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "missing_new_name"
+      },
+      "reference": "{\"error\": \"missing_new_name\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    }
+  ]
+}

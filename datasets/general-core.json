@@ -1,0 +1,1024 @@
+{
+  "id": "general-core",
+  "name": "通用工程回归 · 核心80题",
+  "version": "1.0.0",
+  "description": "80道人工整理的确定性工程回归题，覆盖8类基础能力。用于版本回归和评测流程验证；不是标准学术基准，不代表完整通用能力，也不验证自研DSL。所有题目仅按输出结果或JSON结构判定，不执行生成代码。",
+  "questions": [
+    {
+      "id": "math-01",
+      "category": "数值推理",
+      "question": "计算 17 + 28 × 3。只输出整数。",
+      "evaluator": "exact",
+      "expected": "101",
+      "reference": "101",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-02",
+      "category": "数值推理",
+      "question": "计算 3/4 + 1/8。只输出十进制小数，保留3位小数，小数点前保留0。",
+      "evaluator": "exact",
+      "expected": "0.875",
+      "reference": "0.875",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-03",
+      "category": "数值推理",
+      "question": "商品原价120元，先打八折，再在折后价上加收10%的税。只输出最终金额，保留1位小数。",
+      "evaluator": "exact",
+      "expected": "105.6",
+      "reference": "105.6",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-04",
+      "category": "数值推理",
+      "question": "5台相同机器5分钟制造5个零件。机器相互独立且速度恒定。20台机器制造20个零件需要几分钟？只输出整数。",
+      "evaluator": "exact",
+      "expected": "5",
+      "reference": "5",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-05",
+      "category": "数值推理",
+      "question": "掷两个公平六面骰子，点数和为7的概率是多少？只输出最简分数，格式 a/b。",
+      "evaluator": "exact",
+      "expected": "1/6",
+      "reference": "1/6",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-06",
+      "category": "数值推理",
+      "question": "设备每15分钟处理4件任务，速度恒定。2小时处理几件？只输出整数。",
+      "evaluator": "exact",
+      "expected": "32",
+      "reference": "32",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-07",
+      "category": "数值推理",
+      "question": "同样行驶120千米，以每小时60千米行驶比每小时80千米多用多少分钟？只输出整数。",
+      "evaluator": "exact",
+      "expected": "30",
+      "reference": "30",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-08",
+      "category": "数值推理",
+      "question": "甲乙人数比为3:5，总人数64。甲有多少人？只输出整数。",
+      "evaluator": "exact",
+      "expected": "24",
+      "reference": "24",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-09",
+      "category": "数值推理",
+      "question": "数列 [9,1,6,3,8] 的中位数是多少？只输出整数。",
+      "evaluator": "exact",
+      "expected": "6",
+      "reference": "6",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "math-10",
+      "category": "数值推理",
+      "question": "闭区间 [-3,7] 中有多少个偶数？0视为偶数。只输出整数。",
+      "evaluator": "exact",
+      "expected": "5",
+      "reference": "5",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-01",
+      "category": "逻辑与约束",
+      "question": "所有红色零件都是圆形。零件A是红色。A是否必然是圆形？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "YES",
+      "reference": "YES",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-02",
+      "category": "逻辑与约束",
+      "question": "所有管理员都是员工；有些员工是工程师。能否必然推出所有管理员都是工程师？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "NO",
+      "reference": "NO",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-03",
+      "category": "逻辑与约束",
+      "question": "任务A必须在B之前完成，C必须在B之后完成。三个任务各执行一次，最先执行哪个？只输出任务字母。",
+      "evaluator": "exact",
+      "expected": "A",
+      "reference": "A",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-04",
+      "category": "逻辑与约束",
+      "question": "已知 P 成立必然导致 Q 成立，现在 Q 不成立。P是否可能成立？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "NO",
+      "reference": "NO",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-05",
+      "category": "逻辑与约束",
+      "question": "访问规则：当且仅当“是会员且未被冻结”时允许访问。用户是会员，且未被冻结。只输出 ALLOW 或 DENY。",
+      "evaluator": "exact",
+      "expected": "ALLOW",
+      "reference": "ALLOW",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-06",
+      "category": "逻辑与约束",
+      "question": "A=true，B=false，C=false。判断“恰好一个条件为真”。只输出 TRUE 或 FALSE。",
+      "evaluator": "exact",
+      "expected": "TRUE",
+      "reference": "TRUE",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-07",
+      "category": "逻辑与约束",
+      "question": "“所有任务都已完成”的逻辑否定是哪项？A.所有任务都未完成 B.至少一个任务未完成 C.至少一个任务已完成。只输出选项字母。",
+      "evaluator": "exact",
+      "expected": "B",
+      "reference": "B",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-08",
+      "category": "逻辑与约束",
+      "question": "两个定时任务分别每3天和每4天运行一次，今天同时运行。下一次同时运行是几天后？只输出整数。",
+      "evaluator": "exact",
+      "expected": "12",
+      "reference": "12",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-09",
+      "category": "逻辑与约束",
+      "question": "如果下雨则地面湿。已知地面湿，能否必然推出下雨？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "NO",
+      "reference": "NO",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "logic-10",
+      "category": "逻辑与约束",
+      "question": "x<y，z<y，x<z。按从小到大排列三个变量。只输出用英文逗号连接的变量名。",
+      "evaluator": "exact",
+      "expected": "x,z,y",
+      "reference": "x,z,y",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-01",
+      "category": "结构化输出",
+      "question": "计算2+3。仅输出一个JSON对象，唯一字段 result，值为整数。",
+      "evaluator": "json",
+      "expected": {
+        "result": 5
+      },
+      "reference": "{\"result\": 5}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-02",
+      "category": "结构化输出",
+      "question": "仅输出一个JSON对象：enabled 为布尔值 false，count 为整数 0。不得把值写成字符串。",
+      "evaluator": "json",
+      "expected": {
+        "enabled": false,
+        "count": 0
+      },
+      "reference": "{\"enabled\": false, \"count\": 0}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-03",
+      "category": "结构化输出",
+      "question": "仅输出一个JSON对象：未知的 email 必须表示为 JSON null，id 为整数7。",
+      "evaluator": "json",
+      "expected": {
+        "email": null,
+        "id": 7
+      },
+      "reference": "{\"email\": null, \"id\": 7}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-04",
+      "category": "结构化输出",
+      "question": "将 [3,1,3,2] 去重并升序排列。仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "reference": "[1, 2, 3]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-05",
+      "category": "结构化输出",
+      "question": "仅输出JSON对象，user 字段是对象，内含 name 字符串 \"Lin\" 和 roles 数组 [\"reader\"]。",
+      "evaluator": "json",
+      "expected": {
+        "user": {
+          "name": "Lin",
+          "roles": [
+            "reader"
+          ]
+        }
+      },
+      "reference": "{\"user\": {\"name\": \"Lin\", \"roles\": [\"reader\"]}}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-06",
+      "category": "结构化输出",
+      "question": "仅输出JSON对象：status=\"ok\"，items=[]。不要添加任何其他字段。",
+      "evaluator": "json",
+      "expected": {
+        "status": "ok",
+        "items": []
+      },
+      "reference": "{\"status\": \"ok\", \"items\": []}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-07",
+      "category": "结构化输出",
+      "question": "将键值 city=北京、active=true 转成JSON对象。active必须为布尔值。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "city": "北京",
+        "active": true
+      },
+      "reference": "{\"city\": \"北京\", \"active\": true}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-08",
+      "category": "结构化输出",
+      "question": "仅输出JSON对象，message字段的值是包含真实换行的字符串，两行内容依次为 hello 和 world。",
+      "evaluator": "json",
+      "expected": {
+        "message": "hello\nworld"
+      },
+      "reference": "{\"message\": \"hello\\nworld\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-09",
+      "category": "结构化输出",
+      "question": "仅输出JSON数组，按原顺序保留 [0,false,null,\"\"] 中的全部元素，保持类型。",
+      "evaluator": "json",
+      "expected": [
+        0,
+        false,
+        null,
+        ""
+      ],
+      "reference": "[0, false, null, \"\"]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "json-10",
+      "category": "结构化输出",
+      "question": "仅输出JSON对象：a为整数1，b为字符串\"1\"，c为布尔值true。",
+      "evaluator": "json",
+      "expected": {
+        "a": 1,
+        "b": "1",
+        "c": true
+      },
+      "reference": "{\"a\": 1, \"b\": \"1\", \"c\": true}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-01",
+      "category": "信息提取",
+      "question": "从文本“订单号：A-103；总价：42.50元；状态：已付”提取订单号。仅输出订单号。",
+      "evaluator": "exact",
+      "expected": "A-103",
+      "reference": "A-103",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-02",
+      "category": "信息提取",
+      "question": "文本：联系人王明，邮箱 wang@example.org，电话未提供。仅输出JSON对象，字段 email 与 phone，缺失电话用null。",
+      "evaluator": "json",
+      "expected": {
+        "email": "wang@example.org",
+        "phone": null
+      },
+      "reference": "{\"email\": \"wang@example.org\", \"phone\": null}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-03",
+      "category": "信息提取",
+      "question": "事件：2025-03-04 09:15 开始，09:47 结束。仅输出持续分钟数。",
+      "evaluator": "exact",
+      "expected": "32",
+      "reference": "32",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-04",
+      "category": "信息提取",
+      "question": "记录：task=17 status=failed retry=2。仅输出JSON对象，task与retry为整数，status为字符串。",
+      "evaluator": "json",
+      "expected": {
+        "task": 17,
+        "status": "failed",
+        "retry": 2
+      },
+      "reference": "{\"task\": 17, \"status\": \"failed\", \"retry\": 2}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-05",
+      "category": "信息提取",
+      "question": "从“温度 -3.5°C，湿度 65%”提取温度值。仅输出温度数字文本，原样保留负号与小数位，不加引号。",
+      "evaluator": "exact",
+      "expected": "-3.5",
+      "reference": "-3.5",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-06",
+      "category": "信息提取",
+      "question": "文本包含版本 v1.9 与 v1.10。按主版本、次版本数字比较，哪个版本较新？仅输出版本号。",
+      "evaluator": "exact",
+      "expected": "v1.10",
+      "reference": "v1.10",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-07",
+      "category": "信息提取",
+      "question": "清单：apple=3, banana=2, apple=4。将同名项目数量求和。仅输出JSON对象。",
+      "evaluator": "json",
+      "expected": {
+        "apple": 7,
+        "banana": 2
+      },
+      "reference": "{\"apple\": 7, \"banana\": 2}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-08",
+      "category": "信息提取",
+      "question": "日志依次为 INFO start；ERROR disk；WARN slow；ERROR timeout。仅输出ERROR事件的内容，使用JSON数组，保持顺序。",
+      "evaluator": "json",
+      "expected": [
+        "disk",
+        "timeout"
+      ],
+      "reference": "[\"disk\", \"timeout\"]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-09",
+      "category": "信息提取",
+      "question": "从文本“用户ID=007；部门=研发”提取用户ID并保留前导零。只输出该ID。",
+      "evaluator": "exact",
+      "expected": "007",
+      "reference": "007",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "extract-10",
+      "category": "信息提取",
+      "question": "文本：负责人李华，截止日期未定。仅输出JSON对象，字段 owner 和 due，due用null。",
+      "evaluator": "json",
+      "expected": {
+        "owner": "李华",
+        "due": null
+      },
+      "reference": "{\"owner\": \"李华\", \"due\": null}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-01",
+      "category": "代码理解",
+      "question": "Python 3：x=[1,2]; y=x; y.append(3)。仅输出 x 的最终值，使用JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        1,
+        2,
+        3
+      ],
+      "reference": "[1, 2, 3]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-02",
+      "category": "代码理解",
+      "question": "Python 3：list(range(2,8,2)) 的结果是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        2,
+        4,
+        6
+      ],
+      "reference": "[2, 4, 6]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-03",
+      "category": "代码理解",
+      "question": "Python 3：len({1,1,2,3}) 的值是多少？仅输出整数。",
+      "evaluator": "exact",
+      "expected": "3",
+      "reference": "3",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-04",
+      "category": "代码理解",
+      "question": "Python 3：7//2 与 7%2 的值依次是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        3,
+        1
+      ],
+      "reference": "[3, 1]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-05",
+      "category": "代码理解",
+      "question": "Python 3：a=[10,20,30,40]; a[1:3] 的值是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        20,
+        30
+      ],
+      "reference": "[20, 30]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-06",
+      "category": "代码理解",
+      "question": "Python 3：s=0\nfor i in range(4):\n    if i==2: continue\n    s+=i\n执行后s是多少？仅输出整数。",
+      "evaluator": "exact",
+      "expected": "4",
+      "reference": "4",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-07",
+      "category": "代码理解",
+      "question": "Python 3：d={\"a\":1}; d.get(\"b\",0) 的值是多少？仅输出整数。",
+      "evaluator": "exact",
+      "expected": "0",
+      "reference": "0",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-08",
+      "category": "代码理解",
+      "question": "Python 3：def f(x):\n    return x*2\n[f(i) for i in [1,3,5]] 的结果是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        2,
+        6,
+        10
+      ],
+      "reference": "[2, 6, 10]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-09",
+      "category": "代码理解",
+      "question": "Python 3：bool(\"\")、bool(\"0\")、bool([]) 的结果依次是什么？仅输出JSON布尔值数组。",
+      "evaluator": "json",
+      "expected": [
+        false,
+        true,
+        false
+      ],
+      "reference": "[false, true, false]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "code-10",
+      "category": "代码理解",
+      "question": "Python 3：a=[[0]]*2; a[0][0]=1。此时a是什么？仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "reference": "[[1], [1]]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-01",
+      "category": "边界与异常",
+      "question": "一个函数约定：空列表的最大值返回null，非空返回最大值。输入[]。仅输出JSON对象 {\"result\":...}。",
+      "evaluator": "json",
+      "expected": {
+        "result": null
+      },
+      "reference": "{\"result\": null}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-02",
+      "category": "边界与异常",
+      "question": "除法接口约定：分母为0时返回 {\"error\":\"division_by_zero\"}，否则返回结果。输入分子7、分母0。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "division_by_zero"
+      },
+      "reference": "{\"error\": \"division_by_zero\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-03",
+      "category": "边界与异常",
+      "question": "分页大小10，总记录数0。空数据集页数定义为0。仅输出页数整数。",
+      "evaluator": "exact",
+      "expected": "0",
+      "reference": "0",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-04",
+      "category": "边界与异常",
+      "question": "分页大小10，总记录数21。页数向上取整。仅输出页数整数。",
+      "evaluator": "exact",
+      "expected": "3",
+      "reference": "3",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-05",
+      "category": "边界与异常",
+      "question": "校验年龄：仅允许闭区间[0,120]中的整数。输入年龄120。仅输出 VALID 或 INVALID。",
+      "evaluator": "exact",
+      "expected": "VALID",
+      "reference": "VALID",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-06",
+      "category": "边界与异常",
+      "question": "校验年龄：仅允许闭区间[0,120]中的整数。输入年龄-1。仅输出 VALID 或 INVALID。",
+      "evaluator": "exact",
+      "expected": "INVALID",
+      "reference": "INVALID",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-07",
+      "category": "边界与异常",
+      "question": "字符串查找约定：未找到则返回-1。字符串\"abc\"中查找\"z\"。仅输出整数。",
+      "evaluator": "exact",
+      "expected": "-1",
+      "reference": "-1",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-08",
+      "category": "边界与异常",
+      "question": "去重时保留首次出现顺序。输入 [2,2,1,2,1,3]。仅输出JSON数组。",
+      "evaluator": "json",
+      "expected": [
+        2,
+        1,
+        3
+      ],
+      "reference": "[2, 1, 3]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-09",
+      "category": "边界与异常",
+      "question": "区间采用左闭右开 [0,10)。值10是否属于区间？只输出 YES 或 NO。",
+      "evaluator": "exact",
+      "expected": "NO",
+      "reference": "NO",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "edge-10",
+      "category": "边界与异常",
+      "question": "平均值接口约定：空列表返回 {\"error\":\"empty_input\"}。输入[]。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "empty_input"
+      },
+      "reference": "{\"error\": \"empty_input\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-01",
+      "category": "文本处理",
+      "question": "把字符串 \"  model eval  \" 去除首尾空格，保留中间空格。仅输出结果字符串，不加引号。",
+      "evaluator": "exact",
+      "expected": "model eval",
+      "reference": "model eval",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-02",
+      "category": "文本处理",
+      "question": "将 \"a,,b,\" 按英文逗号分割并保留空项。仅输出JSON字符串数组。",
+      "evaluator": "json",
+      "expected": [
+        "a",
+        "",
+        "b",
+        ""
+      ],
+      "reference": "[\"a\", \"\", \"b\", \"\"]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-03",
+      "category": "文本处理",
+      "question": "将字符串 \"AaB\" 中的大小写字母互换。仅输出结果，不加引号。",
+      "evaluator": "exact",
+      "expected": "aAb",
+      "reference": "aAb",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-04",
+      "category": "文本处理",
+      "question": "按不区分大小写统计 \"Apple apple BANANA\" 中的单词次数。仅输出小写键名的JSON对象。",
+      "evaluator": "json",
+      "expected": {
+        "apple": 2,
+        "banana": 1
+      },
+      "reference": "{\"apple\": 2, \"banana\": 1}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-05",
+      "category": "文本处理",
+      "question": "字符串 \"模型eval\" 含有多少个Unicode字符？中文每个字计1个字符。仅输出整数。",
+      "evaluator": "exact",
+      "expected": "6",
+      "reference": "6",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-06",
+      "category": "文本处理",
+      "question": "将列表 [\"a\",\"b\",\"c\"] 用符号 | 连接。仅输出结果，不加引号。",
+      "evaluator": "exact",
+      "expected": "a|b|c",
+      "reference": "a|b|c",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-07",
+      "category": "文本处理",
+      "question": "从 \"ababa\" 中统计子串 \"aba\" 的出现次数，允许重叠。仅输出整数。",
+      "evaluator": "exact",
+      "expected": "2",
+      "reference": "2",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-08",
+      "category": "文本处理",
+      "question": "删除字符串 \"a-b--c\" 中所有连字符。仅输出结果，不加引号。",
+      "evaluator": "exact",
+      "expected": "abc",
+      "reference": "abc",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-09",
+      "category": "文本处理",
+      "question": "将 \"one\ntwo\nthree\" 按换行拆为三项。仅输出JSON字符串数组。",
+      "evaluator": "json",
+      "expected": [
+        "one",
+        "two",
+        "three"
+      ],
+      "reference": "[\"one\", \"two\", \"three\"]",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "text-10",
+      "category": "文本处理",
+      "question": "将 \"zeta alpha beta\" 按单词字典序升序排列，用单个空格连接。仅输出结果，不加引号。",
+      "evaluator": "exact",
+      "expected": "alpha beta zeta",
+      "reference": "alpha beta zeta",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-01",
+      "category": "接口参数",
+      "question": "接口 add(a:int,b:int)。用户要求把3和5相加。仅输出JSON对象，字段 tool=\"add\" 和 arguments，arguments内含a与b。",
+      "evaluator": "json",
+      "expected": {
+        "tool": "add",
+        "arguments": {
+          "a": 3,
+          "b": 5
+        }
+      },
+      "reference": "{\"tool\": \"add\", \"arguments\": {\"a\": 3, \"b\": 5}}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-02",
+      "category": "接口参数",
+      "question": "接口 search(query:str,limit:int=10)。用户要求搜索“模型评测”，最多3条。仅输出参数JSON对象，字段query、limit。",
+      "evaluator": "json",
+      "expected": {
+        "query": "模型评测",
+        "limit": 3
+      },
+      "reference": "{\"query\": \"模型评测\", \"limit\": 3}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-03",
+      "category": "接口参数",
+      "question": "接口 create_user(name:str,age:int)，年龄必须非负。请求name=\"Lin\",age=-2。约定校验失败返回 {\"error\":\"invalid_age\"}。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "invalid_age"
+      },
+      "reference": "{\"error\": \"invalid_age\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-04",
+      "category": "接口参数",
+      "question": "两个接口：get_user(id)查询用户，delete_user(id)删除用户。用户要求查询ID为8的用户。仅输出JSON对象，字段tool和arguments。",
+      "evaluator": "json",
+      "expected": {
+        "tool": "get_user",
+        "arguments": {
+          "id": 8
+        }
+      },
+      "reference": "{\"tool\": \"get_user\", \"arguments\": {\"id\": 8}}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-05",
+      "category": "接口参数",
+      "question": "接口 update(id:int,patch:object)，未要求修改的字段不得传入patch。用户要求将ID=4的用户状态改为active。仅输出参数JSON对象。",
+      "evaluator": "json",
+      "expected": {
+        "id": 4,
+        "patch": {
+          "status": "active"
+        }
+      },
+      "reference": "{\"id\": 4, \"patch\": {\"status\": \"active\"}}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-06",
+      "category": "接口参数",
+      "question": "接口 list_items(offset:int,limit:int)。页码从1开始，每页20条。请求第3页。仅输出参数JSON对象。",
+      "evaluator": "json",
+      "expected": {
+        "offset": 40,
+        "limit": 20
+      },
+      "reference": "{\"offset\": 40, \"limit\": 20}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-07",
+      "category": "接口参数",
+      "question": "接口 transfer(amount:int,currency:str)，currency只接受CNY或USD。用户指定currency=EUR，约定返回 {\"error\":\"unsupported_currency\"}。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "unsupported_currency"
+      },
+      "reference": "{\"error\": \"unsupported_currency\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-08",
+      "category": "接口参数",
+      "question": "接口 set_flag(enabled:bool)。用户要求关闭功能。仅输出参数JSON对象，保持布尔类型。",
+      "evaluator": "json",
+      "expected": {
+        "enabled": false
+      },
+      "reference": "{\"enabled\": false}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-09",
+      "category": "接口参数",
+      "question": "接口 schedule(hour:int,minute:int)，按24小时制。用户指定下午3点05分。仅输出参数JSON对象。",
+      "evaluator": "json",
+      "expected": {
+        "hour": 15,
+        "minute": 5
+      },
+      "reference": "{\"hour\": 15, \"minute\": 5}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    },
+    {
+      "id": "api-10",
+      "category": "接口参数",
+      "question": "接口 rename(id:int,new_name:str)，new_name为必填。用户只提供id=2。约定缺参返回 {\"error\":\"missing_new_name\"}。仅输出JSON。",
+      "evaluator": "json",
+      "expected": {
+        "error": "missing_new_name"
+      },
+      "reference": "{\"error\": \"missing_new_name\"}",
+      "criteria": "严格遵守题目要求的输出格式，答案须与独立参考值一致。",
+      "options": {},
+      "critical": false
+    }
+  ]
+}
